@@ -6,18 +6,24 @@ const DOMAIN_URL_IMAGE = 'https://cataas.com'
 export default function App () {
   const [fact, setFact] = useState()
   const [image, setImage] = useState()
+
+  // Retrieve random fact
   useEffect(() => {
     fetch(RANDOM_FACT_URL)
       .then(res => res.json())
-      .then(data => {
-        setFact(data.fact)
-        const twoFirstWords = data.fact.split(' ', 2).join(' ')
-
-        fetch(RANDOM_IAMGE_URL(twoFirstWords))
-          .then(res => res.json())
-          .then(data => setImage(data.url))
-      })
+      .then(data => setFact(data.fact)
+      )
   }, [])
+
+  // Retrieve image with random fact
+  useEffect(() => {
+    if (!fact) return
+    const twoFirstWords = fact.split(' ', 2).join(' ')
+
+    fetch(RANDOM_IAMGE_URL(twoFirstWords))
+      .then(res => res.json())
+      .then(data => setImage(data.url))
+  }, [fact])
   return (
     <main>
       <h1>Random cats</h1>
