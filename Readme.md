@@ -11,10 +11,10 @@ Random Image: https://cataas.com/cat/says/hello
 ## Requirements for the technical assessment
 
 - Create the React entry point without using CRA, or Vite create react ✅
-- Retrieve a random fact from the first API
-- Keep the first word from the response
-- Retrieve an imagen from the second API
-- Place the word in the image requested before.
+- Retrieve a random fact from the first API ✅
+- Keep the first two words from the response ✅
+- Retrieve an imagen from the second API ✅
+- Create a button to show another random image and fact
 
 ## Tech Stack
 
