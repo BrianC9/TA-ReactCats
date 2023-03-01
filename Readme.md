@@ -4,9 +4,13 @@
 
 Retrieves a random fact from the first API, and displays an image retrieved from the second API, with the first word retrieved previously.
 
+Random Facts: https://catfact.ninja/fact
+
+Random Image: https://cataas.com/cat/says/hello
+
 ## Requirements for the technical assessment
 
-- Create the React entry point without using CRA, or Vite create react
+- Create the React entry point without using CRA, or Vite create react ✅
 - Retrieve a random fact from the first API
 - Keep the first word from the response
 - Retrieve an imagen from the second API
