@@ -1,9 +1,11 @@
 const RANDOM_FACT_URL = 'https://catfact.ninja/fact'
 
-export async function getRandomFact () {
+export async function getRandomFact (firstNWords) {
   const res = await fetch(RANDOM_FACT_URL)
   const data = await res.json()
-  return data.fact
+  const factSplitted = data.fact.split(' ', firstNWords).join(' ')
+  console.log(factSplitted)
+  return factSplitted
 }
 // export function getRandomFactWithFetch () {
 //   return fetch(RANDOM_FACT_URL)

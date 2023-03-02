@@ -3,7 +3,7 @@ import { useCatImage } from './hooks/useCatImage'
 import { useCatFact } from './hooks/useCatFact'
 
 export default function App () {
-  const { fact, refreshFact } = useCatFact()
+  const { fact, refreshFact } = useCatFact(3)
   const { image } = useCatImage({ fact })
 
   const handleClick = () => {
@@ -14,7 +14,7 @@ export default function App () {
       <h1>Random cats</h1>
       <button onClick={handleClick}>New Fact</button>
       {fact && <p>{fact}</p>}
-      {image && <img src={image} alt={`Cat picture with the the text ${fact}`} />}
+      {image && <img src={image} alt={`Cat picture with the the text ${fact}`} data-testid={fact} />}
 
     </main>
   )

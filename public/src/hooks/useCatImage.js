@@ -8,9 +8,8 @@ export function useCatImage ({ fact }) {
   // Retrieve image with random fact
   useEffect(() => {
     if (!fact) return
-    const twoFirstWords = fact.split(' ', 2).join(' ')
 
-    fetch(RANDOM_IAMGE_URL(twoFirstWords))
+    fetch(RANDOM_IAMGE_URL(fact))
       .then(res => res.json())
       .then(data => setImage(data.url))
   }, [fact])
