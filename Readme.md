@@ -14,7 +14,8 @@ Random Image: https://cataas.com/cat/says/hello
 - Retrieve a random fact from the first API ✅
 - Keep the first two words from the response ✅
 - Retrieve an imagen from the second API ✅
-- Create a button to show another random image and fact
+- Create a button to show another random image and fact✅
+- Create a e2e test ✅
 
 ## Tech Stack
 
@@ -22,4 +23,4 @@ Random Image: https://cataas.com/cat/says/hello
 
 ## Job Level
 
-- Entry level - Junior position
+- Frontend developer Junior position
